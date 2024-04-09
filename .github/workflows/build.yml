@@ -12,3 +12,8 @@ jobs:
             - run: npm ci
             - run: npm run clean
             - run: npm run build
+            - name: Upload artifact for deployment job
+              uses: actions/upload-artifact@v4
+              with:
+                name: node-app
+                path: .
